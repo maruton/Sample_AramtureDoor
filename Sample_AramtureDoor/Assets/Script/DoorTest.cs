@@ -36,13 +36,13 @@ public class DoorTest : MonoBehaviour {
 		float ScrnVert = (float)Screen.height;
 		Rect rectBtn = new Rect(ScrnHor*0.12f,ScrnVert*0.10f,ScrnHor*0.76f,ScrnVert*0.05f);
 		if(GUI.Button(rectBtn, "[OPEN]")) {
-			animation["Open"].speed = 4.0f;//再生速度指定
-			animation.Play("Open");
+			GetComponent<Animation>()["Open"].speed = 4.0f;//再生速度指定
+			GetComponent<Animation>().Play("Open");
 		}
 		rectBtn = new Rect(ScrnHor*0.12f,ScrnVert*0.15f,ScrnHor*0.76f,ScrnVert*0.05f);
 		if(GUI.Button(rectBtn, "[CLOSE]")) {
-			animation["CLose"].speed = 4.0f;//再生速度指定
-			animation.Play("CLose");
+			GetComponent<Animation>()["CLose"].speed = 4.0f;//再生速度指定
+			GetComponent<Animation>().Play("CLose");
 		}
 	}
 }
